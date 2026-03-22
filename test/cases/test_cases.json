@@ -1,0 +1,89 @@
+[
+  {
+    "title": "Basic Full Justification 📄",
+    "input": {
+      "words": ["This", "is", "an", "example", "of", "text", "justification."],
+      "maxWidth": 16
+    },
+    "output": [
+      "This    is    an",
+      "example  of text",
+      "justification.  "
+    ],
+    "description": "Standard case with multiple lines and evenly distributed spaces ⚖️"
+  },
+  {
+    "title": "Single Long Word Line 🧍",
+    "input": {
+      "words": ["What","must","be","acknowledgment","shall","be"],
+      "maxWidth": 16
+    },
+    "output": [
+      "What   must   be",
+      "acknowledgment  ",
+      "shall be        "
+    ],
+    "description": "Handles single-word line and left-justified last line 📏"
+  },
+  {
+    "title": "Complex Multi-Line Distribution 🧩",
+    "input": {
+      "words": ["Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"],
+      "maxWidth": 20
+    },
+    "output": [
+      "Science  is  what we",
+      "understand      well",
+      "enough to explain to",
+      "a  computer.  Art is",
+      "everything  else  we",
+      "do                  "
+    ],
+    "description": "Multiple lines with uneven space distribution and proper alignment 📐"
+  },
+  {
+    "title": "Exact Fit No Extra Spaces 🎯",
+    "input": {
+      "words": ["Hello", "World"],
+      "maxWidth": 11
+    },
+    "output": [
+      "Hello World"
+    ],
+    "description": "Words exactly fit the line width with no extra spacing needed ✅"
+  },
+  {
+    "title": "Single Word Only 📌",
+    "input": {
+      "words": ["OpenAI"],
+      "maxWidth": 10
+    },
+    "output": [
+      "OpenAI    "
+    ],
+    "description": "Single word padded with trailing spaces to match width ➡️"
+  },
+  {
+    "title": "Uneven Space Distribution ⬅️",
+    "input": {
+      "words": ["a", "b", "c", "d"],
+      "maxWidth": 6
+    },
+    "output": [
+      "a  b c",
+      "d     "
+    ],
+    "description": "Extra spaces assigned to left gaps when uneven ⚖️"
+  },
+  {
+    "title": "Last Line Left Justified 🧾",
+    "input": {
+      "words": ["last", "line", "test"],
+      "maxWidth": 14
+    },
+    "output": [
+      "last line test"
+    ],
+    "description": "Last line uses single spaces and trailing padding only 📄"
+  }
+]
