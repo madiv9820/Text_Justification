@@ -40,6 +40,10 @@ maxWidth = 16
 ]
 ```
 
+#### Explanation 🧾:
+- The last line is left-justified → **`"shall be "`**
+- The second line contains only one word, so it is also left-aligned
+
 #### 🔹 Example 3
 #### Input:
 ```
@@ -58,10 +62,6 @@ maxWidth = 20
   "do                  "
 ]
 ```
-
-#### Explanation 🧾:
-- The last line is left-justified → **`"shall be "`**
-- The second line contains only one word, so it is also left-aligned
 
 ### 📏 Formatting Rules
 - Words must be arranged in order and grouped into lines 🧩
