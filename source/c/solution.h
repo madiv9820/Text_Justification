@@ -4,6 +4,7 @@ char** fullJustify(
     char** words, 
     int wordSize, 
     int maxWidth, 
-    int* returnSize) {
+    int* returnSize
+) {
     return NULL;
 }
