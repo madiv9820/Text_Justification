@@ -1,5 +1,9 @@
 #include <stdio.h>
 
-char** fullJustify(char** words, int wordSize, int maxWidth, int* returnSize) {
+char** fullJustify(
+    char** words, 
+    int wordSize, 
+    int maxWidth, 
+    int* returnSize) {
     return NULL;
 }
