@@ -8,7 +8,7 @@ class test_cSolution(unittest.TestCase):
     def setUp(self):
         """
         🛠️ Setup method:
-        - Loads test cases from JSON 📂
+        - Loads test cases from JSO 📂
         - Initializes the solution instance 🧠
         """
         # 📍 Get the current directory of this test file
