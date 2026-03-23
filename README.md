@@ -91,4 +91,9 @@ Return a list of strings where:
 - Each string represents a justified line 📄
 - Each line has exactly **`maxWidth`** characters
 - All formatting rules are strictly followed ✅
+
+### [🧠 Greedy Simulation Approach](https://github.com/madiv9820/Text_Justification/tree/Approach-Greedy_Simulation)
+Pack words into each line as tightly as possible using a **greedy strategy 📦**, then distribute spaces evenly ⚖️.
+Extra spaces are assigned to the **leftmost gaps**, while the **last line is left-justified 📏**.
+
 ---
