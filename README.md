@@ -1,94 +1,51 @@
-# [📝 Text Justification](https://leetcode.com/problems/text-justification/description/?envType=study-plan-v2&envId=top-interview-150)
-You are given:
-- An array of strings **`words`**, where each element represents a word 📚
-- An integer **`maxWidth`**, representing the maximum number of characters allowed per line 📏
+# 📝 Text Justification — Greedy Approach
+### 📌 Overview
 
-Your task is to format the given words into multiple lines such that:
-- Each line contains **exactly `maxWidth` characters**
-- Each line is **fully justified**, meaning text is aligned evenly on both the left and right sides ⚖️
+This problem focuses on formatting a list of words such that each line has exactly **`maxWidth`** characters and is **fully justified** (aligned both left and right).
 
-### 📌 Examples
+The approach follows a **greedy strategy**:
+- Pack as many words as possible into each line 📦
+- Distribute spaces evenly between words ⚖️
+- Assign extra spaces to the left slots when needed ⬅️
 
-#### 🔹 Example 1
-#### Input:
-```
-words = ["This", "is", "an", "example", "of", "text", "justification."]
-maxWidth = 16
-```
-#### Output:
-```
-[
-  "This    is    an",
-  "example  of text",
-  "justification.  "
-]
-```
+### ⚙️ Approach: Greedy Line Packing + Space Distribution
+#### 🧩 Step 1: Pack Words Greedily
+- Iterate through the list of words
+- Keep adding words to the current line until adding another word would exceed **`maxWidth`**
 
-#### 🔹 Example 2
-#### Input:
-```
-words = ["What","must","be","acknowledgment","shall","be"]
-maxWidth = 16
-```
+#### ⚖️ Step 2: Distribute Spaces
+Once a line is finalized:
+- Calculate total extra spaces required
+- Distribute spaces evenly between words
+- If spaces don’t divide evenly:
+  - Extra spaces go to the **leftmost gaps first** ⬅️
 
-#### Output:
-```
-[
-  "What   must   be",
-  "acknowledgment  ",
-  "shall be        "
-]
-```
+#### 📏 Step 3: Handle Edge Cases
+- **Single word in a line** → Left-justify and pad spaces at the end
+- **Last line**:
+  - Words are separated by a single space
+  - Remaining spaces are added at the end
 
-#### Explanation 🧾:
-- The last line is left-justified → **`"shall be "`**
-- The second line contains only one word, so it is also left-aligned
+### 🌍 Multi-Language Implementation
+This approach is implemented consistently across:
+- 🐍 Python — clean and readable
+- ⚙️ C++ — efficient STL-based implementation
+- 🔧 C — low-level implementation with manual memory management
 
-#### 🔹 Example 3
-#### Input:
-```
-words = ["Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"]
-maxWidth = 20
-```
+### ⏱️ Complexity Analysis
+| **Type**             | **Complexity** |
+| ---------------- | ---------- |
+| Time Complexity  | **⏱️ `O(n)`**    |
+| Space Complexity | **📦 `O(n)`**    |
 
-#### Output:
-```
-[
-  "Science  is  what we",
-  "understand      well",
-  "enough to explain to",
-  "a  computer.  Art is",
-  "everything  else  we",
-  "do                  "
-]
-```
 
-### 📏 Formatting Rules
-- Words must be arranged in order and grouped into lines 🧩
-- Each line should contain as many words as possible without exceeding **`maxWidth`**
-- Extra spaces **`' '`** should be added so that the total length of each line becomes exactly **`maxWidth`**
+### 💡 Key Insights
+- The problem is not about complex algorithms, but **careful simulation 🧩**
+- Handling **spaces correctly** is the core challenge ⚖️
+- A structured greedy approach keeps the implementation clean and efficient 🚀
 
-### 📊 Constraints
-- **`1 <= words.length <= 300`**
-- **`1 <= words[i].length <= 20`**
-- **`words[i]`** consists of only English letters and symbols 🔡
-- **`1 <= maxWidth <= 100`**
-- **`words[i].length <= maxWidth`**
-
-### ⚖️ Space Distribution
-- Spaces are inserted **between words** to achieve the required line width
-- These spaces should be distributed as evenly as possible
-- If the spaces cannot be evenly divided:
-    - The **leftmost gaps receive more spaces** than the right ones ⬅️
-
-### 📌 Additional Notes
-- A word is defined as a sequence of non-space characters 🔤
-- Each word has a length between **`1`** and **`maxWidth`**
-- The input array **`words`** contains at least one word
-
-### 🎯 Output
-Return a list of strings where:
-- Each string represents a justified line 📄
-- Each line has exactly **`maxWidth`** characters
-- All formatting rules are strictly followed ✅
+### 🎯 Summary
+- Greedy packing ensures optimal line usage
+- Even space distribution achieves proper justification
+- Special handling of edge cases ensures correctness
 ---
